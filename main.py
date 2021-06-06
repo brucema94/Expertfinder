@@ -5,6 +5,7 @@ from selenium import webdriver
 driver = webdriver.Chrome(executable_path=r'C:\Users\bruce\PycharmProjects\ExpertFinder\chromedriver.exe')
 
 from linkedin_scraper import Person, actions
+from linkedin_scraper import Company
 
 #PWD
 from yaml import load as load_yaml
@@ -18,4 +19,5 @@ config = config_loader("PassWD.yaml")
 email = "brucema1994@gmail.com"
 password = config["PWD"]
 actions.login(driver, email, password) # if email and password isnt given, it'll prompt in terminal
-person = Person("https://www.linkedin.com/in/andre-iguodala-65b48ab5", driver=driver)
+# person = Person("https://www.linkedin.com/in/andre-iguodala-65b48ab5", driver = driver, scrape=False)
+company = Company("https://www.linkedin.com/company/chocolate-company-caf%C3%A9-groningen/", driver = driver)
