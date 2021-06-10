@@ -1,0 +1,23 @@
+[
+    {
+        "first_name": "Steven",
+        "middle_name": "",
+        "last_name": "Leeb",
+        "institution_name": "Massachusetts Institute of Technology",
+        "score": null
+    },
+    {
+        "first_name": "Armando",
+        "middle_name": "",
+        "last_name": "Fox",
+        "institution_name": "University of California Berkeley",
+        "score": 43338
+    },
+    {
+        "first_name": "Lydia",
+        "middle_name": "",
+        "last_name": "Sohn",
+        "institution_name": "University of California Berkeley",
+        "score": null
+    }
+]

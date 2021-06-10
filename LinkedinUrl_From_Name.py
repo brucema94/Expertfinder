@@ -5,10 +5,10 @@ from bs4 import BeautifulSoup
 def ProfessorLunkedInScrapper(
   ProfessorName,CollegeName 
 ):
-  #ProfessorName = "Steven Pinker"   
-  #CollegeName = "Harvard"
+  #ProfessorName = "Roel Verstappen"   
+  #CollegeName = "University of Groningen"
   query = 'https://google.com/search?q=site:linkedin.com/in AND "'+ProfessorName+'" AND "'+CollegeName+'"'
-  
+
   response = requests.get(query)
   soup = BeautifulSoup(response.text,'html.parser')
   print(soup)
@@ -16,6 +16,8 @@ def ProfessorLunkedInScrapper(
     url = anchor["href"]
     if 'https://www.linkedin.com/' in url:
       url = url[7:url.find('&')]
-      print(url)
+      #print(url)
       time.sleep(1)
       return url
+
+print(ProfessorLunkedInScrapper("Steven Pinker","Harvard"))
